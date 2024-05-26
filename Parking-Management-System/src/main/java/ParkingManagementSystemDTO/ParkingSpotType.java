@@ -6,6 +6,7 @@ package ParkingManagementSystemDTO;
 /**
  * 
  */
-public class ParkingSpotType {
+public enum ParkingSpotType {
+	COMPACT, LARGE, DISABLED
 
 }

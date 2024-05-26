@@ -6,6 +6,7 @@ package ParkingManagementSystemDTO;
 /**
  * 
  */
-public class VehicleType {
-
+public enum VehicleType {
+	TWOWHEELER,FOURWHEELER
+ 
 }

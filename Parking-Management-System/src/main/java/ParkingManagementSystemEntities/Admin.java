@@ -26,7 +26,7 @@ public class Admin {
 	private String adminSex;
 	
 	@Column(name= "Admin_Age", length=20)
-	private int adminAge;
+	private Long adminAge;
 	
 	@Column(name= "Admin_Address", length=100)
 	private String adminAddress;

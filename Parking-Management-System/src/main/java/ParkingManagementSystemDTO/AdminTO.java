@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AdminTO {
 
-	private int adminId;
 	private String adminName;	
 	private String adminSex;	
-	private int adminAge;
+	private Long adminAge;
 	private String adminAddress;
 }

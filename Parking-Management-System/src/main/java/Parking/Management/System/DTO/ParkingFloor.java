@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ParkingManagementSystemDTO;
+package Parking.Management.System.DTO;
 
 import java.util.List;
 import java.util.Map;

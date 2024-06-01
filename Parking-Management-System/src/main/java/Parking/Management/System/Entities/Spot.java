@@ -1,4 +1,4 @@
-package ParkingManagementSystemEntities;
+package Parking.Management.System.Entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

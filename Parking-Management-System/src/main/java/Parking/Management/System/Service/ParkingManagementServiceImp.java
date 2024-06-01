@@ -1,10 +1,10 @@
-package ParkingManagementSystemService;
+package Parking.Management.System.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ParkingManagementSystemDao.AdminDaoImp;
-import ParkingManagementSystemEntities.Admin;
+import Parking.Management.System.Dao.AdminDaoImp;
+import Parking.Management.System.Entities.Admin;
 
 @Service
 public class ParkingManagementServiceImp {

@@ -1,4 +1,4 @@
-package ParkingManagementSystemEntities;
+package Parking.Management.System.Entities;
 
 import java.sql.Timestamp;
 

@@ -17,7 +17,7 @@ public class Admin {
 	@Id
 	@Generated
 	@Column(name= "Admin_Id", length=20)
-	private int adminId;
+	private Long adminId;
 	
 	@Column(name= "Admin_Name", length=50)	
 	private String adminName;

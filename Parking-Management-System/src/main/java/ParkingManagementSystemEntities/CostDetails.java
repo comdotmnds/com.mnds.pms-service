@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CostDetails {
 	@Id
-	@Column(name="Vehicle_Type", length = 10)
+	@Column(name="Vehicle_Type", length = 10, nullable = false)
 	private String vehicleType;
-	@Column(name = "Price_per_Hours", length = 10)
+	@Column(name = "Price_per_Hours", length = 10, nullable = false)
 	private Long pricePerHrs;
 	
 

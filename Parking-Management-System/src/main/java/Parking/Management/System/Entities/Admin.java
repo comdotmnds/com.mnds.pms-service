@@ -36,7 +36,7 @@ public class Admin {
 		
 	}
 
-	public Admin(Long adminId, String adminName, String adminSex, Long adminAge, String adminAddress) {
+	public Admin(String adminName, String adminSex, Long adminAge, String adminAddress) {
 		
 		this.adminName = adminName;
 		this.adminSex = adminSex;

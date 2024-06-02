@@ -19,13 +19,6 @@ public class FloorDetail {
 	private String floorId;
 	@Column(name="spot_id")
 	private String spotId;
-	@Column(name="total_two_wheeler_spot",length = 10)
-	private String totalTwoWheelerSpot;
-	@Column(name="available_two_wheeler_spot",length = 10)
-	private String availableTwoWheelerSpot;
-	@Column(name="total_four_wheeler_spot",length = 10)
-	private String totalFourWheelerSpot;
-	@Column(name="available_four_wheeler_spot",length = 10)
-	private String availableFourWheelerSpot;
+
 
 }

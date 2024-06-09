@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import Parking.Management.System.Entities.Admin;
 
 @Repository
-public interface AdminDaoImp extends JpaRepository<Admin, Long> {
+public interface AdminDaoImp extends JpaRepository<Admin, String> {
 
 	//Admin save(AdminTO adminTO);
 

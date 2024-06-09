@@ -16,103 +16,41 @@ import lombok.NoArgsConstructor;
 public class Admin {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name= "Admin_Id")
-	private Long id;
+	@Column(name= "Id",nullable = false)
+	private String username;
 	
-	@Column(name= "Admin_Name", length=50)	
-	private String adminName;
+	@Column(name= "Name", length=50,nullable = false)	
+	private String name;
 	
-	@Column(name= "Admin_Sex", length=10)
-	private String adminSex;
+	@Column(name= "Gender", length=10,nullable = false)
+	private String gender;
 	
-	@Column(name= "Admin_Age", length=20)
-	private Long adminAge;
+	@Column(name= "Age", length=3,nullable = false)
+	private Long age;
 	
-	@Column(name= "Admin_Address", length=100)
-	private String adminAddress;
+	@Column(name= "Contact", length=10,nullable = true)
+	private String contact;
+	@Column(name= "Email_Id", length=100,nullable = false)
+	private String email;
+	
+	@Column(name= "Address", length=500,nullable = false)
+	private String address;
+	
+	
 
 	public Admin() {
 		
 	}
 
-	public Admin(String adminName, String adminSex, Long adminAge, String adminAddress) {
-		
-		this.adminName = adminName;
-		this.adminSex = adminSex;
-		this.adminAge = adminAge;
-		this.adminAddress = adminAddress;
+	public Admin(String username, String name, String gender, Long age, String contact, String email, String address) {
+		this.username = username;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		this.contact = contact;
+		this.email = email;
+		this.address = address;
 	}
 
-	
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	/**
-	 * @return the adminName
-	 */
-	public String getAdminName() {
-		return adminName;
-	}
-
-	/**
-	 * @param adminName the adminName to set
-	 */
-	public void setAdminName(String adminName) {
-		this.adminName = adminName;
-	}
-
-	/**
-	 * @return the adminSex
-	 */
-	public String getAdminSex() {
-		return adminSex;
-	}
-
-	/**
-	 * @param adminSex the adminSex to set
-	 */
-	public void setAdminSex(String adminSex) {
-		this.adminSex = adminSex;
-	}
-
-	/**
-	 * @return the adminAge
-	 */
-	public Long getAdminAge() {
-		return adminAge;
-	}
-
-	/**
-	 * @param adminAge the adminAge to set
-	 */
-	public void setAdminAge(Long adminAge) {
-		this.adminAge = adminAge;
-	}
-
-	/**
-	 * @return the adminAddress
-	 */
-	public String getAdminAddress() {
-		return adminAddress;
-	}
-
-	/**
-	 * @param adminAddress the adminAddress to set
-	 */
-	public void setAdminAddress(String adminAddress) {
-		this.adminAddress = adminAddress;
-	}
 	
 }

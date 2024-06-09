@@ -19,9 +19,8 @@ public class AdminWebController {
 
 	@Autowired
 	private ParkingManagementServiceImp parkingManagementServiceImp;
-
 	@GetMapping("/admins/{id}")
-	public ResponseEntity<Admin> getAdminById(@PathVariable Long id) {
+	public ResponseEntity<Admin> getAdminById(@PathVariable String id) {
 		Admin admin = parkingManagementServiceImp.getAdminDetails(id);
 		return new ResponseEntity<Admin>(admin, HttpStatus.OK);
 

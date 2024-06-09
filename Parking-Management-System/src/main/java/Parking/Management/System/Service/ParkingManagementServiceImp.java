@@ -17,7 +17,7 @@ public class ParkingManagementServiceImp {
 	@Autowired
 	private SpotAvailabilityDaoImp spotAvailabilityDaoImp;
 	
-	public Admin getAdminDetails(Long id) {
+	public Admin getAdminDetails(String id) {
 		
 		return adminDaoImp.findById(id).orElse(null);
 	}

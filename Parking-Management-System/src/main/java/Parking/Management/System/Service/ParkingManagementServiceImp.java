@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import Parking.Management.System.Dao.AdminDaoImp;
 import Parking.Management.System.Dao.CustomerDetailsDaoImp;
 import Parking.Management.System.Dao.SpotAvailabilityDaoImp;
@@ -54,6 +53,16 @@ public class ParkingManagementServiceImp {
 	public CustomerDetails saveSpotDetails(CustomerDetails spotTO) {
 		// TODO Auto-generated method stub
 		return customerDetailsDaoImp.save(spotTO);
+	}
+
+	public SpotAvailability updateSpotAvailability(Long id) {
+		// TODO Auto-generated method stub
+		return spotAvailabilityDaoImp.findById(id).orElse(null);
+	}
+
+	public Admin findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return adminDaoImp.findById(username).orElse(null);
 	}
 
 	

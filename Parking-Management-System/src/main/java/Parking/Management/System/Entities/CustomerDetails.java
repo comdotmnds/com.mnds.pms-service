@@ -1,9 +1,10 @@
 package Parking.Management.System.Entities;
 
-import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -16,8 +17,9 @@ import lombok.NoArgsConstructor;
 public class CustomerDetails {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name= "Token_Id", length=10)
-	private String tokenId;
+	private Long tokenId;
 	
 	@Column(name= "Floor_Id", length=10)
 	private String floorId;
@@ -35,11 +37,159 @@ public class CustomerDetails {
 	private String vehicleType;
 	
 	@Column(name= "In_Time")
-	private Timestamp inTime;
+	private String inTime;
 	
 	@Column(name= "Out_Time")
-	private Timestamp outTime;
+	private String outTime;
 	
 	@Column(name= "Total_Fare", length=5)
 	private String totalFare;
+
+	/**
+	 * @param floorId
+	 * @param spotId
+	 * @param ownerName
+	 * @param vehicleNumber
+	 * @param vehicleType
+	 * @param inTime
+	 * @param outTime
+	 * @param totalFare
+	 */
+	public CustomerDetails(String floorId, String spotId, String ownerName, String vehicleNumber, String vehicleType,
+			String inTime, String outTime, String totalFare) {
+		this.floorId = floorId;
+		this.spotId = spotId;
+		this.ownerName = ownerName;
+		this.vehicleNumber = vehicleNumber;
+		this.vehicleType = vehicleType;
+		this.inTime = inTime;
+		this.outTime = outTime;
+		this.totalFare = totalFare;
+	}
+
+	/**
+	 * @return the tokenId
+	 */
+	public Long getTokenId() {
+		return tokenId;
+	}
+
+	/**
+	 * @param tokenId the tokenId to set
+	 */
+	public void setTokenId(Long tokenId) {
+		this.tokenId = tokenId;
+	}
+
+	/**
+	 * @return the floorId
+	 */
+	public String getFloorId() {
+		return floorId;
+	}
+
+	/**
+	 * @param floorId the floorId to set
+	 */
+	public void setFloorId(String floorId) {
+		this.floorId = floorId;
+	}
+
+	/**
+	 * @return the spotId
+	 */
+	public String getSpotId() {
+		return spotId;
+	}
+
+	/**
+	 * @param spotId the spotId to set
+	 */
+	public void setSpotId(String spotId) {
+		this.spotId = spotId;
+	}
+
+	/**
+	 * @return the ownerName
+	 */
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	/**
+	 * @param ownerName the ownerName to set
+	 */
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+
+	/**
+	 * @return the vehicleNumber
+	 */
+	public String getVehicleNumber() {
+		return vehicleNumber;
+	}
+
+	/**
+	 * @param vehicleNumber the vehicleNumber to set
+	 */
+	public void setVehicleNumber(String vehicleNumber) {
+		this.vehicleNumber = vehicleNumber;
+	}
+
+	/**
+	 * @return the vehicleType
+	 */
+	public String getVehicleType() {
+		return vehicleType;
+	}
+
+	/**
+	 * @param vehicleType the vehicleType to set
+	 */
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
+
+	/**
+	 * @return the inTime
+	 */
+	public String getInTime() {
+		return inTime;
+	}
+
+	/**
+	 * @param inTime the inTime to set
+	 */
+	public void setInTime(String inTime) {
+		this.inTime = inTime;
+	}
+
+	/**
+	 * @return the outTime
+	 */
+	public String getOutTime() {
+		return outTime;
+	}
+
+	/**
+	 * @param outTime the outTime to set
+	 */
+	public void setOutTime(String outTime) {
+		this.outTime = outTime;
+	}
+
+	/**
+	 * @return the totalFare
+	 */
+	public String getTotalFare() {
+		return totalFare;
+	}
+
+	/**
+	 * @param totalFare the totalFare to set
+	 */
+	public void setTotalFare(String totalFare) {
+		this.totalFare = totalFare;
+	}
 }

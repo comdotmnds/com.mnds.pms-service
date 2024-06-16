@@ -13,12 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class FloorDetail {
-	
 	@Id
 	@Column(name="floor_id")
 	private String floorId;
-	@Column(name="spot_id")
-	private String spotId;
-
-
+	@Column(name="two_wheeler_spot_id")
+	private String twoWheelerSpotId;
+	@Column(name="four_wheeler_spot_id")
+	private String fourWheelerSpotId;
 }

@@ -46,9 +46,9 @@ public class ParkingManagementServiceImp {
 		// TODO Auto-generated method stub
 		return spotAvailabilityDaoImp.save(spotAvailability);
 	}
-	public Spot getSpotDetails(String id) {
+	public CustomerDetails getSpotDetails(String id) {
 		// TODO Auto-generated method stub
-		return spotDaoImp.findById(id).orElse(null);
+		return customerDetailsDaoImp.findBySpotId(id).orElse(null);
 	}
 	public CustomerDetails saveSpotDetails(CustomerDetails spotTO) {
 		// TODO Auto-generated method stub

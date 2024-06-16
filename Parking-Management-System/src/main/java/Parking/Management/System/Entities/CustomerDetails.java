@@ -16,16 +16,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CustomerDetails {
 	
+	/**
+	 * 
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name= "Token_Id", length=10)
 	private Long tokenId;
 	
-	@Column(name= "Floor_Id", length=10)
-	private String floorId;
-	
 	@Column(name= "Spot_Id", length=10)
 	private String spotId;
+	
+	@Column(name= "Floor_Id", length=10)
+	private String floorId;
 	
 	@Column(name= "Owner_Name", length=50)
 	private String ownerName;
@@ -44,10 +47,15 @@ public class CustomerDetails {
 	
 	@Column(name= "Total_Fare", length=5)
 	private String totalFare;
+	
+	public CustomerDetails() {
+
+	}
 
 	/**
-	 * @param floorId
+	 * @param tokenId
 	 * @param spotId
+	 * @param floorId
 	 * @param ownerName
 	 * @param vehicleNumber
 	 * @param vehicleType
@@ -55,10 +63,12 @@ public class CustomerDetails {
 	 * @param outTime
 	 * @param totalFare
 	 */
-	public CustomerDetails(String floorId, String spotId, String ownerName, String vehicleNumber, String vehicleType,
-			String inTime, String outTime, String totalFare) {
-		this.floorId = floorId;
+	public CustomerDetails(Long tokenId, String spotId, String floorId, String ownerName, String vehicleNumber,
+			String vehicleType, String inTime, String outTime, String totalFare) {
+
+		this.tokenId = tokenId;
 		this.spotId = spotId;
+		this.floorId = floorId;
 		this.ownerName = ownerName;
 		this.vehicleNumber = vehicleNumber;
 		this.vehicleType = vehicleType;
@@ -82,20 +92,6 @@ public class CustomerDetails {
 	}
 
 	/**
-	 * @return the floorId
-	 */
-	public String getFloorId() {
-		return floorId;
-	}
-
-	/**
-	 * @param floorId the floorId to set
-	 */
-	public void setFloorId(String floorId) {
-		this.floorId = floorId;
-	}
-
-	/**
 	 * @return the spotId
 	 */
 	public String getSpotId() {
@@ -107,6 +103,20 @@ public class CustomerDetails {
 	 */
 	public void setSpotId(String spotId) {
 		this.spotId = spotId;
+	}
+
+	/**
+	 * @return the floorId
+	 */
+	public String getFloorId() {
+		return floorId;
+	}
+
+	/**
+	 * @param floorId the floorId to set
+	 */
+	public void setFloorId(String floorId) {
+		this.floorId = floorId;
 	}
 
 	/**
@@ -192,4 +202,7 @@ public class CustomerDetails {
 	public void setTotalFare(String totalFare) {
 		this.totalFare = totalFare;
 	}
+
+
+
 }

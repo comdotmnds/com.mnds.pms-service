@@ -29,10 +29,10 @@ public class SpotDetailController {
 	private ParkingManagementServiceImp parkingManagementServiceImp;
 	
 	@GetMapping ("/get/spot/detail/{id}")
-    public ResponseEntity <Spot> getSpotDtails(@PathVariable String id){
+    public ResponseEntity <CustomerDetails> getSpotDtails(@PathVariable String id){
 		
-		Spot spot=parkingManagementServiceImp.getSpotDetails(id);
-		return new ResponseEntity <Spot>(spot, HttpStatus.OK);
+		CustomerDetails spot=parkingManagementServiceImp.getSpotDetails(id);
+		return new ResponseEntity <CustomerDetails>(spot, HttpStatus.OK);
 	}
 	
 	@PostMapping(path = "/spotDtl")

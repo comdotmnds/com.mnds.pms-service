@@ -23,7 +23,7 @@ public class SpotAvailability {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name= "Floor_Id", length =10)
+	@Column(name= "Floor_Id")
 	private Long floorId;
 	
 	@Column(name= "available_two_wheeler_spot", length =10)

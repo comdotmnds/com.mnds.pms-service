@@ -33,7 +33,7 @@ public class CustomerDetails {
 	@Column(name= "Vehicle_Number", length=20)
 	private String vehicleNumber;
 	
-	@Column(name= "Vehicle_Type", length=10)
+	@Column(name= "Vehicle_Type", length=20)
 	private String vehicleType;
 	
 	@Column(name= "In_Time")

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Parking.Management.System.DTO.Login;
-import Parking.Management.System.DTO.Login;
 import Parking.Management.System.Entities.Admin;
 import Parking.Management.System.Service.ParkingManagementServiceImp;
 

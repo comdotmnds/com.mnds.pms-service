@@ -13,6 +13,7 @@ import Parking.Management.System.Entities.Admin;
 import Parking.Management.System.Entities.CustomerDetails;
 import Parking.Management.System.Entities.Spot;
 import Parking.Management.System.Entities.SpotAvailability;
+import Parking.Management.System.Entities.Ticket;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -63,6 +64,14 @@ public class ParkingManagementServiceImp {
 	public Admin findByUsername(String username) {
 		// TODO Auto-generated method stub
 		return adminDaoImp.findById(username).orElse(null);
+	}
+	public CustomerDetails getTicketDetails(Long id) {
+		// TODO Auto-generated method stub
+		return customerDetailsDaoImp.findById(id).orElse(null);
+	}
+	public CustomerDetails saveTicketDetails(CustomerDetails ticket) {
+		// TODO Auto-generated method stub
+		return customerDetailsDaoImp.save(ticket);
 	}
 
 	

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import Parking.Management.System.Entities.CustomerDetails;
 import Parking.Management.System.Entities.Spot;
+import Parking.Management.System.Entities.Ticket;
 import Parking.Management.System.Service.ParkingManagementServiceImp;
 
 /**
@@ -42,6 +43,7 @@ public class SpotDetailController {
 
 		return new ResponseEntity<CustomerDetails>(customerDetails, HttpStatus.OK);
 
-	}	
+	}
+	
 
 }

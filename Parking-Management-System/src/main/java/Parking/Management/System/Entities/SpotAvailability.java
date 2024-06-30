@@ -5,8 +5,6 @@ package Parking.Management.System.Entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -22,9 +20,8 @@ import lombok.NoArgsConstructor;
 public class SpotAvailability {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name= "Floor_Id")
-	private Long floorId;
+	private String floorId;
 	
 	@Column(name= "available_two_wheeler_spot", length =10)
 	private String availableTwoWheelerSpot;
@@ -59,14 +56,14 @@ public class SpotAvailability {
 	/**
 	 * @return the floorId
 	 */
-	public Long getFloorId() {
+	public String getFloorId() {
 		return floorId;
 	}
 
 	/**
 	 * @param floorId the floorId to set
 	 */
-	public void setFloorId(Long floorId) {
+	public void setFloorId(String floorId) {
 		this.floorId = floorId;
 	}
 

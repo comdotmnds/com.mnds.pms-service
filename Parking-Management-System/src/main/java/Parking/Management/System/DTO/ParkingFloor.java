@@ -4,14 +4,22 @@
 package Parking.Management.System.DTO;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * 
  */
 public class ParkingFloor {
-	private Map<ParkingSpotType,List<ParkingSpot>> parkingSpots;
+	private List<ParkingSpot> parkingSpots;
 	private String parkingFloorID;
+	/**
+	 * @param parkingSpots
+	 * @param parkingFloorID
+	 */
+	public ParkingFloor(List<ParkingSpot> parkingSpots, String parkingFloorID) {
+		
+		this.parkingSpots = parkingSpots;
+		this.parkingFloorID = parkingFloorID;
+	}
 	/**
 	 * 
 	 */
@@ -19,38 +27,15 @@ public class ParkingFloor {
 		
 	}
 	/**
-	 * @param parkingSpots
-	 */
-	public ParkingFloor(Map<ParkingSpotType, List<ParkingSpot>> parkingSpots) {
-		
-		this.parkingSpots = parkingSpots;
-	}
-	/**
-	 * @param parkingFloorID
-	 */
-	public ParkingFloor(String parkingFloorID) {
-		
-		this.parkingFloorID = parkingFloorID;
-	}
-	/**
-	 * @param parkingSpots
-	 * @param parkingFloorID
-	 */
-	public ParkingFloor(Map<ParkingSpotType, List<ParkingSpot>> parkingSpots, String parkingFloorID) {
-		super();
-		this.parkingSpots = parkingSpots;
-		this.parkingFloorID = parkingFloorID;
-	}
-	/**
 	 * @return the parkingSpots
 	 */
-	public Map<ParkingSpotType, List<ParkingSpot>> getParkingSpots() {
+	public List<ParkingSpot> getParkingSpots() {
 		return parkingSpots;
 	}
 	/**
 	 * @param parkingSpots the parkingSpots to set
 	 */
-	public void setParkingSpots(Map<ParkingSpotType, List<ParkingSpot>> parkingSpots) {
+	public void setParkingSpots(List<ParkingSpot> parkingSpots) {
 		this.parkingSpots = parkingSpots;
 	}
 	/**
@@ -65,4 +50,5 @@ public class ParkingFloor {
 	public void setParkingFloorID(String parkingFloorID) {
 		this.parkingFloorID = parkingFloorID;
 	}
+
 }

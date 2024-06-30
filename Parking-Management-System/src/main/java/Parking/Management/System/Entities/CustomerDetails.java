@@ -21,7 +21,7 @@ public class CustomerDetails {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name= "Token_Id", length=10)
+	@Column(name= "Token_Id")
 	private Long tokenId;
 	
 	@Column(name= "Spot_Id", length=10)
@@ -47,10 +47,36 @@ public class CustomerDetails {
 	
 	@Column(name= "Total_Fare", length=5)
 	private String totalFare;
+
+	@Column(name= "Contact", length=5)
+	private String contact;
+
+	@Column(name= "Email", length=5)
+	private String email;
+
+	//contact, email
 	
 	public CustomerDetails() {
 
 	}
+
+
+	/**
+	 * @param ownerName
+	 * @param vehicleNumber
+	 * @param vehicleType
+	 * @param contact
+	 * @param email
+	 */
+	public CustomerDetails(String ownerName, String vehicleNumber, String vehicleType, String contact, String email) {
+		super();
+		this.ownerName = ownerName;
+		this.vehicleNumber = vehicleNumber;
+		this.vehicleType = vehicleType;
+		this.contact = contact;
+		this.email = email;
+	}
+
 
 	/**
 	 * @param tokenId
@@ -62,10 +88,12 @@ public class CustomerDetails {
 	 * @param inTime
 	 * @param outTime
 	 * @param totalFare
+	 * @param contact
+	 * @param email
 	 */
 	public CustomerDetails(Long tokenId, String spotId, String floorId, String ownerName, String vehicleNumber,
-			String vehicleType, String inTime, String outTime, String totalFare) {
-
+			String vehicleType, String inTime, String outTime, String totalFare, String contact, String email) {
+		super();
 		this.tokenId = tokenId;
 		this.spotId = spotId;
 		this.floorId = floorId;
@@ -75,7 +103,10 @@ public class CustomerDetails {
 		this.inTime = inTime;
 		this.outTime = outTime;
 		this.totalFare = totalFare;
+		this.contact = contact;
+		this.email = email;
 	}
+
 
 	/**
 	 * @return the tokenId
@@ -201,6 +232,38 @@ public class CustomerDetails {
 	 */
 	public void setTotalFare(String totalFare) {
 		this.totalFare = totalFare;
+	}
+
+
+	/**
+	 * @return the contact
+	 */
+	public String getContact() {
+		return contact;
+	}
+
+
+	/**
+	 * @param contact the contact to set
+	 */
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 

@@ -12,6 +12,6 @@ import Parking.Management.System.Entities.SpotAvailability;
  * 
  */
 @Repository
-public interface SpotAvailabilityDaoImp extends JpaRepository<SpotAvailability, Long>{
+public interface SpotAvailabilityDaoImp extends JpaRepository<SpotAvailability, String>{
 
 }

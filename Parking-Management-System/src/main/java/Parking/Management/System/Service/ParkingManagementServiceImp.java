@@ -5,15 +5,14 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import Parking.Management.System.Business.ParkingManaagementBusiness;
 import Parking.Management.System.Dao.AdminDaoImp;
 import Parking.Management.System.Dao.CustomerDetailsDaoImp;
 import Parking.Management.System.Dao.SpotAvailabilityDaoImp;
-import Parking.Management.System.Dao.SpotDaoImp;
 import Parking.Management.System.Entities.Admin;
 import Parking.Management.System.Entities.CustomerDetails;
-import Parking.Management.System.Entities.Spot;
 import Parking.Management.System.Entities.SpotAvailability;
-import Parking.Management.System.Entities.Ticket;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -23,9 +22,10 @@ public class ParkingManagementServiceImp {
 	@Autowired
 	private SpotAvailabilityDaoImp spotAvailabilityDaoImp;
 	@Autowired
-	private SpotDaoImp spotDaoImp;
-	@Autowired
 	private CustomerDetailsDaoImp customerDetailsDaoImp;
+    @Autowired
+	private ParkingManaagementBusiness parkingManaagementBusiness;
+	
 	
 	public Admin getAdminDetails(String id) {
 		
@@ -56,11 +56,6 @@ public class ParkingManagementServiceImp {
 		return customerDetailsDaoImp.save(spotTO);
 	}
 
-	public SpotAvailability updateSpotAvailability(Long id) {
-		// TODO Auto-generated method stub
-		return spotAvailabilityDaoImp.findById(id).orElse(null);
-	}
-
 	public Admin findByUsername(String username) {
 		// TODO Auto-generated method stub
 		return adminDaoImp.findById(username).orElse(null);
@@ -74,6 +69,15 @@ public class ParkingManagementServiceImp {
 		return customerDetailsDaoImp.save(ticket);
 	}
 
-	
-
+   public SpotAvailability addFloor(SpotAvailability spotAvb) {
+	   return parkingManaagementBusiness.addFloor(spotAvb);
+   }
+public CustomerDetails vhclEntry(CustomerDetails entry) {
+	// TODO Auto-generated method stub
+	return parkingManaagementBusiness.vhclEntry(entry);
+}
+public CustomerDetails vhclExit(Long id) {
+	// TODO Auto-generated method stub
+	return parkingManaagementBusiness.vhclExit(id);
+}
 }

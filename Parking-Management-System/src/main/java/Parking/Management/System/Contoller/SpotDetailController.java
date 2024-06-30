@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import Parking.Management.System.Entities.CustomerDetails;
 import Parking.Management.System.Entities.Spot;
@@ -46,4 +47,22 @@ public class SpotDetailController {
 	}
 	
 
-}
+	@PostMapping(path = "/entry")
+	public ResponseEntity<CustomerDetails> vhclEntry(@RequestBody CustomerDetails entry) {
+
+		CustomerDetails customerDetails = parkingManagementServiceImp.vhclEntry(entry);
+
+		return new ResponseEntity<CustomerDetails>(customerDetails, HttpStatus.OK);
+
+	}
+
+	@PostMapping(path = "/exit")
+	public ResponseEntity<CustomerDetails> vhclExit(@RequestParam Long id) {
+
+		CustomerDetails customerDetails = parkingManagementServiceImp.vhclExit(id);
+
+		return new ResponseEntity<CustomerDetails>(customerDetails, HttpStatus.OK);
+
+	}
+
+	}

@@ -17,6 +17,45 @@ public class CostDetails {
 	private String vehicleType;
 	@Column(name = "Price_per_Hours", length = 10, nullable = false)
 	private Long pricePerHrs;
+	/**
+	 * 
+	 */
+	public CostDetails() {
+
+	}
+	/**
+	 * @param vehicleType
+	 * @param pricePerHrs
+	 */
+	public CostDetails(String vehicleType, Long pricePerHrs) {
+	
+		this.vehicleType = vehicleType;
+		this.pricePerHrs = pricePerHrs;
+	}
+	/**
+	 * @return the vehicleType
+	 */
+	public String getVehicleType() {
+		return vehicleType;
+	}
+	/**
+	 * @param vehicleType the vehicleType to set
+	 */
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
+	/**
+	 * @return the pricePerHrs
+	 */
+	public Long getPricePerHrs() {
+		return pricePerHrs;
+	}
+	/**
+	 * @param pricePerHrs the pricePerHrs to set
+	 */
+	public void setPricePerHrs(Long pricePerHrs) {
+		this.pricePerHrs = pricePerHrs;
+	}
 	
 
 }

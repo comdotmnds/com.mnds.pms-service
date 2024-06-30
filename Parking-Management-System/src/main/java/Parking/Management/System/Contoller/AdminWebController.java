@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import Parking.Management.System.DTO.Login;
 import Parking.Management.System.Entities.Admin;
+import Parking.Management.System.Entities.SpotAvailability;
 import Parking.Management.System.Service.ParkingManagementServiceImp;
 
 @CrossOrigin (origins="*")
@@ -50,8 +51,13 @@ public class AdminWebController {
 	   
 	  
 	return new ResponseEntity<Admin>(admin, HttpStatus.NOT_FOUND);
-
 	}
+	@PostMapping(path ="/addFloor")
+	public ResponseEntity<?> addFloor(@RequestBody SpotAvailability spotAvl){
+		SpotAvailability spl=parkingManagementServiceImp.addFloor(spotAvl);
+		return new ResponseEntity<>(spl, HttpStatus.OK);
+	}
+	
 
 
 }
